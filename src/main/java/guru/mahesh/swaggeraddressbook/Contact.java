@@ -7,6 +7,9 @@ public class Contact {
 	private String phone;
 	private String email;
 	
+	
+	// we can also add the swagger for the model class
+	
 	public String getConId() {
 		return conId;
 	}
