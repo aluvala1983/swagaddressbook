@@ -28,12 +28,14 @@ public class AddressBookRepo {
 	}
 
 	@GetMapping("/")
+	@ApiOperation(value="Search all",notes="List all contatcts",response=Contact.class)
 	public List<Contact> getAllContacts()
 	{
 		return new ArrayList<Contact>(contacts.values());
 		
 	}
 	@PostMapping("/")
+	@ApiOperation(value="Add Data",notes="Add one by one contacts",response=Contact.class)
 	public Contact addContact(@RequestBody Contact contact)
 	{
 		contacts.put(contact.getConId(),contact);
